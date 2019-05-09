@@ -17,6 +17,14 @@ console.log('Go!')
 
 // PLACE YOUR CODE BELOW
 
+var r1 = () => {
+  console.log('I waited 1 second');
+  return wait(3)
+}
+var r2 = () => console.log('I waited 3 more seconds');
+
+wait(1).then(r1).then(r2);
+
 // PLACE YOUR CODE ABOVE
 /*
 You console output should look like the following AND wait the
