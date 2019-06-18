@@ -12,6 +12,19 @@ function paintMixer(color1, color2) {
   The order of the params should not matter.
   */
   // PLACE YOUR CODE BELOW
+ 
+  var colors = [color1, color2];
+  colors.sort();
+  
+  var key = colors.join('_');
+  var combinations  = {
+    'blue_red' : 'purple',
+    'blue_yellow' : 'green',
+    'green_red' : 'brown',
+    'red_yellow' : 'orange'
+  };
+
+  return combinations.hasOwnProperty(key) ? combinations[key] : 'unknown';
 
   // PLACE YOUR CODE ABOVE
 }
